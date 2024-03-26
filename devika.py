@@ -166,7 +166,7 @@ def token_usage():
 
 @app.route("/api/real-time-logs", methods=["GET"])
 def real_time_logs():
-    log_file = Logger().read_log_file()
+    log_file = logger.read_log_file()
     return jsonify({"log_file": log_file})
 
 
